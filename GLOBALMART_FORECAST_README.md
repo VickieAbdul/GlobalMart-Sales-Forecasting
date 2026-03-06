@@ -265,7 +265,7 @@ Potential improvements for this analysis:
 
 ---
 
-## 📚 What This Project Teaches
+## What This Project Teaches
 
 ### Forecasting Fundamentals
 - **Trend:** Long-term growth or decline pattern
@@ -308,13 +308,13 @@ The dataset is simulated but follows realistic e-commerce patterns based on indu
 **Victoria Abdul**  
 Data Analyst | Python | Time Series Forecasting
 
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [linkedin.com/in/victoria-abdul](https://linkedin.com/in/victoria-abdul)
-- 🐙 GitHub: [github.com/vickieabdul](https://github.com/vickieabdul)
+- Email: your.email@example.com
+- LinkedIn: [linkedin.com/in/victoria-abdul](https://linkedin.com/in/victoria-abdul)
+- GitHub: [github.com/vickieabdul](https://github.com/vickieabdul)
 
 ---
 
-## 📄 License
+## License
 
 MIT License - Free to use for educational and portfolio purposes.
 
