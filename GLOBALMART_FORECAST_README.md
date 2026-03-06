@@ -7,7 +7,7 @@
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 Developed a time series forecasting model to predict 2026 monthly sales for GlobalMart Retail, an international e-commerce platform. This analysis enables data-driven business decisions for inventory planning, staffing allocation, and budget forecasting.
 
@@ -15,14 +15,14 @@ Developed a time series forecasting model to predict 2026 monthly sales for Glob
 *What will our monthly sales be in 2026 so we can optimize inventory, staffing, and marketing spend?*
 
 **Key Results:**  
-✅ **$77.8M projected revenue for 2026**  
-✅ **29.4% year-over-year growth forecast**  
-✅ **Peak season identified:** November ($9.0M) and December ($8.4M)  
-✅ **Actionable recommendations** for Q4 inventory planning ($24.4M estimated need)
+- **$77.8M projected revenue for 2026**  
+- **29.4% year-over-year growth forecast**  
+- **Peak season identified:** November ($9.0M) and December ($8.4M)  
+- **Actionable recommendations** for Q4 inventory planning ($24.4M estimated need)
 
 ---
 
-## 🎯 Business Impact
+## Business Impact
 
 ### Strategic Value
 This forecasting model provides GlobalMart with:
@@ -39,7 +39,7 @@ This forecasting model provides GlobalMart with:
 
 ---
 
-## 📊 Methodology
+## Methodology
 
 ### Forecasting Approach
 Used **Trend + Seasonality Decomposition** method:
@@ -66,15 +66,20 @@ Used **Trend + Seasonality Decomposition** method:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-sales-forecasting/
+GlobalMart Sales Forecasting/
 │
+generate data/
 ├── generate_sales_data.py         # Data generation (2023-2025)
-├── forecast_sales.py               # Forecasting analysis
+|
+data/
 ├── globalmart_sales_data.csv       # Historical sales data
+analysis/
+├── forecast_sales.py               # Forecasting analysis
 │
+visualization/
 ├── chart1_sales_forecast.png       # Historical + 2026 forecast
 ├── chart2_2025_monthly.png         # 2026 monthly breakdown
 ├── chart3_yearly_revenue.png       # Annual revenue trend
@@ -85,7 +90,7 @@ sales-forecasting/
 
 ---
 
-## 🚀 Running the Analysis
+## Running the Analysis
 
 ### Prerequisites
 ```bash
@@ -109,7 +114,7 @@ python forecast_sales.py
 
 ---
 
-## 📈 Key Findings
+## Key Findings
 
 ### Historical Performance (2023-2025)
 
@@ -143,7 +148,7 @@ python forecast_sales.py
 
 ---
 
-## 💼 Business Recommendations
+## Business Recommendations
 
 ### 1. Inventory Management
 **Action:** Increase Q4 inventory by 50% compared to Q2/Q3
@@ -172,7 +177,7 @@ python forecast_sales.py
 
 ---
 
-## 📊 Visualizations
+## Visualizations
 
 ### Chart 1: Sales Forecast (2023-2026)
 Shows historical sales (2023-2025) and forecasted sales (2026) with confidence intervals.
@@ -199,7 +204,7 @@ Annual revenue comparison (2023-2026) showing consistent growth.
 
 ---
 
-## 🔬 Technical Details
+## Technical Details
 
 ### Data Generation
 - **Period:** 36 months (January 2023 - December 2025)
@@ -231,7 +236,7 @@ forecast = (slope × month_index + intercept) × seasonal_factor
 
 ---
 
-## 🎓 Skills Demonstrated
+## Skills Demonstrated
 
 ### Technical Skills
 - **Time Series Analysis:** Trend decomposition and seasonal pattern recognition
@@ -247,7 +252,7 @@ forecast = (slope × month_index + intercept) × seasonal_factor
 
 ---
 
-## 🔄 Future Enhancements
+## Future Enhancements
 
 Potential improvements for this analysis:
 
@@ -285,7 +290,7 @@ This methodology applies to:
 
 ---
 
-## 📫 About This Project
+## About This Project
 
 This project was completed as part of my data analytics portfolio to demonstrate:
 - Time series forecasting skills
@@ -298,7 +303,7 @@ The dataset is simulated but follows realistic e-commerce patterns based on indu
 
 ---
 
-## 👤 Author
+## Author
 
 **Victoria Abdul**  
 Data Analyst | Python | Time Series Forecasting
