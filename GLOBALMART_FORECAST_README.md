@@ -265,31 +265,6 @@ Potential improvements for this analysis:
 
 ---
 
-## What This Project Teaches
-
-### Forecasting Fundamentals
-- **Trend:** Long-term growth or decline pattern
-- **Seasonality:** Repeating patterns (monthly, quarterly, yearly)
-- **Noise:** Random fluctuations in data
-- **Decomposition:** Separating signal from noise
-
-### Business Applications
-- E-commerce revenue planning
-- Retail inventory optimization
-- Workforce management
-- Marketing budget allocation
-- Cash flow forecasting
-
-### Real-World Relevance
-This methodology applies to:
-- **Retail:** Store sales, foot traffic
-- **E-commerce:** Online revenue, conversion rates
-- **SaaS:** Subscription revenue, churn prediction
-- **Supply Chain:** Demand forecasting, procurement planning
-- **Finance:** Budget planning, revenue projections
-
----
-
 ## About This Project
 
 This project was completed as part of my data analytics portfolio to demonstrate:
@@ -308,7 +283,7 @@ The dataset is simulated but follows realistic e-commerce patterns based on indu
 **Victoria Abdul**  
 Data Analyst | Python | Time Series Forecasting
 
-- Email: your.email@example.com
+- Email: victoria.j.abdulkadir@gmail.com
 - LinkedIn: [linkedin.com/in/victoria-abdul](https://linkedin.com/in/victoria-abdul)
 - GitHub: [github.com/vickieabdul](https://github.com/vickieabdul)
 
