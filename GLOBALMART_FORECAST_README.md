@@ -90,30 +90,6 @@ visualization/
 
 ---
 
-## Running the Analysis
-
-### Prerequisites
-```bash
-pip install pandas numpy matplotlib
-```
-
-### Step 1: Generate Historical Data (2023-2025)
-```bash
-python generate_sales_data.py
-```
-**Output:** `globalmart_sales_data.csv` (36 months of sales data)
-
-### Step 2: Run Forecasting Analysis
-```bash
-python forecast_sales.py
-```
-**Output:** 
-- 2026 monthly forecasts
-- 3 visualization charts
-- `globalmart_2026_forecast.csv`
-
----
-
 ## Key Findings
 
 ### Historical Performance (2023-2025)
