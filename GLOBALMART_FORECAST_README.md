@@ -72,12 +72,12 @@ Used **Trend + Seasonality Decomposition** method:
 GlobalMart Sales Forecasting/
 │
 generate data/
-├── generate_sales_data.py         # Data generation (2023-2025)
+├── generate_sales_data.ipynb         # Data generation (2023-2025)
 |
 data/
 ├── globalmart_sales_data.csv       # Historical sales data
 analysis/
-├── forecast_sales.py               # Forecasting analysis
+├── forecast_sales.ipynb               # Forecasting analysis
 │
 visualization/
 ├── chart1_sales_forecast.png       # Historical + 2026 forecast
