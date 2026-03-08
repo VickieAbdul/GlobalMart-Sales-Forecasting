@@ -100,7 +100,8 @@ Data Analyst | Python | Time Series Forecasting
 ## License
 
 MIT License - Free to use for educational and portfolio purposes.
-The dataset used for this project was generated using Claude AI.
+
+* The dataset used for this project was generated using Claude AI.
 ---
 
 **⭐ Star this repository if you found this analysis helpful!**
