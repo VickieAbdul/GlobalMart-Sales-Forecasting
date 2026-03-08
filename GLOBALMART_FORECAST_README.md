@@ -84,7 +84,6 @@ Translated the forecast into specific operational decisions around inventory, st
 ## Executive Conclusion
 GlobalMart is on a strong growth trajectory and the 2026 forecast of $77.79M reflects that momentum continuing. But growth at this pace creates operational risk if the business is not prepared for it. The forecast makes clear that Q4 preparation is the single most important operational priority of the year, that summer requires a different playbook than the rest of the calendar, and that the gap between peak and trough months demands proactive cash flow management.
 
-The dataset used for this project was generated using Claude AI.
 ---
 
 ## Author
@@ -101,7 +100,7 @@ Data Analyst | Python | Time Series Forecasting
 ## License
 
 MIT License - Free to use for educational and portfolio purposes.
-
+The dataset used for this project was generated using Claude AI.
 ---
 
 **⭐ Star this repository if you found this analysis helpful!**
