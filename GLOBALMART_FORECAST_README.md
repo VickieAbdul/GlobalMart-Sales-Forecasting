@@ -1,44 +1,29 @@
-# Sales Forecasting: E-Commerce Revenue Prediction
-## Time Series Analysis for GlobalMart Retail
-
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Status](https://img.shields.io/badge/Status-Complete-success)]()
-[![Data](https://img.shields.io/badge/Data-36%20Months-orange)]()
+# GlobalMart Sales Forecasting: E-Commerce Revenue Prediction
 
 ---
-
 ## Project Overview
-
-Developed a time series forecasting model to predict 2026 monthly sales for GlobalMart Retail, an international e-commerce platform. This analysis enables data-driven business decisions for inventory planning, staffing allocation, and budget forecasting.
-
-**Business Question:**  
-*What will our monthly sales be in 2026 so we can optimize inventory, staffing, and marketing spend?*
-
-**Key Results:**  
-- **$77.8M projected revenue for 2026**  
-- **29.4% year-over-year growth forecast**  
-- **Peak season identified:** November ($9.0M) and December ($8.4M)  
-- **Actionable recommendations** for Q4 inventory planning ($24.4M estimated need)
+This project analyzes three years of sales data from GlobalMart Retail and builds a monthly forecast for 2026 to support inventory planning, staffing decisions, and budget allocation.
+The business challenge is one that most growing e-commerce companies face: revenue is accelerating year over year but without a reliable forward view, operational decisions around stock, headcount, and marketing spend end up reactive rather than planned. This project gives GlobalMart that forward view.
 
 ---
-
-## Business Impact
-
-### Strategic Value
-This forecasting model provides GlobalMart with:
-- **Inventory Optimization:** Plan stock levels 6-12 months in advance
-- **Staffing Strategy:** Hire seasonal workers for peak periods (Q4)
-- **Cash Flow Planning:** Prepare for 29% revenue increase
-- **Marketing Budget:** Allocate 40% of budget to high-performing Q4 months
-
-### Financial Impact
-- **2026 Projected Revenue:** $77.8M
-- **Expected Growth:** +29.4% vs 2025
-- **Revenue Range:** $5.3M (low month) to $9.0M (peak month)
-- **Q4 Revenue:** ~$24.4M (31% of annual sales)
+## Business Problem
+What will GlobalMart's monthly sales be in 2026, and what should the business do differently across the year to prepare for it?
 
 ---
+Dataset Description
+The dataset contains 36 months of historical sales data from January 2023 through December 2025, including:
+- Monthly revenue figures across the full three year period
+- Year over year growth rates
+- Seasonal performance patterns by month
+- Total revenue of $131.67M across the historical period
 
+---
+## Tools Used
+
+- Python (Pandas, NumPy, Matplotlib)
+- Linear trend modeling with seasonal decomposition
+
+---
 ## Methodology
 
 ### Forecasting Approach
@@ -57,8 +42,7 @@ Used **Trend + Seasonality Decomposition** method:
    ```
    Forecasted Sales = Trend Value × Seasonal Multiplier
    ```
-
-### Why This Method Works
+   ### Why This Method Works
 - **Simplicity:** Easy to understand and explain to stakeholders
 - **Transparency:** Clear breakdown of trend vs seasonality
 - **Accuracy:** Captures both growth and seasonal patterns
@@ -66,192 +50,41 @@ Used **Trend + Seasonality Decomposition** method:
 
 ---
 
-## Project Structure
-
-```
-GlobalMart Sales Forecasting/
-│
-generate data/
-├── generate_sales_data.ipynb         # Data generation (2023-2025)
-|
-data/
-├── globalmart_sales_data.csv       # Historical sales data
-analysis/
-├── forecast_sales.ipynb               # Forecasting analysis
-│
-visualization/
-├── chart1_sales_forecast.png       # Historical + 2026 forecast
-├── chart2_2025_monthly.png         # 2026 monthly breakdown
-├── chart3_yearly_revenue.png       # Annual revenue trend
-├── globalmart_2026_forecast.csv    # 2026 predictions
-│
-└── README.md                       # Project documentation
-```
+## Analysis Structure
+1. Exploratory Analysis
+Examined three years of revenue data to understand the growth trajectory and identify any structural patterns worth carrying into the forecast.
+2. Trend and Seasonality Decomposition
+Separated the data into two components: a long term growth trend and a seasonal index showing how each month typically performs relative to the annual average. This decomposition is what makes the forecast reliable rather than just an extrapolation of recent results.
+3. 2026 Forecast
+Applied the trend and seasonal model to generate monthly forecasts for all 12 months of 2026, with a confidence range of plus or minus 10% per month to account for uncertainty.
+4. Business Recommendations
+Translated the forecast into specific operational decisions around inventory, staffing, marketing spend, and cash flow planning.
 
 ---
 
-## Key Findings
+## Key Insights
 
-### Historical Performance (2023-2025)
-
-| Year | Total Revenue | Average Monthly Sales | Growth Rate |
-|------|---------------|----------------------|-------------|
-| 2023 | $30.9M | $2.6M | Baseline |
-| 2024 | $40.7M | $3.4M | +31.8% |
-| 2025 | $60.1M | $5.0M | +47.8% |
-
-### 2026 Forecast
-
-| Month | Forecasted Sales | Range (±10%) |
-|-------|-----------------|--------------|
-| January | $6.3M | $5.6M - $6.9M |
-| February | $5.3M | $4.8M - $5.8M |
-| July | $5.6M | $5.1M - $6.2M |
-| November | $9.0M | $8.1M - $9.9M |
-| December | $8.4M | $7.6M - $9.3M |
-
-### Seasonal Insights
-
-**High Season (Q4):**
-- November & December account for ~22% of annual revenue
-- Black Friday and holiday shopping drive peak sales
-- Requires maximum inventory and staffing
-
-**Low Season (Summer):**
-- July & August show 10-13% below average sales
-- Opportunity to reduce inventory costs
-- Focus on customer retention over acquisition
+- GlobalMart has been growing fast. Revenue went from $30.86M in 2023 to $40.69M in 2024, a 31.8% increase, and then to $60.12M in 2025, a 47.8% increase. The business is accelerating.
+- The 2026 forecast puts total revenue at $77.79M, representing 29.4% growth over 2025 and an average monthly run rate of $6.48M.
+- November is the peak month every year. In 2025 it hit $7.98M and the 2026 forecast puts it at $9.04M. November and December together account for roughly 25% of annual revenue.
+- February is consistently the weakest month, forecast at $5.28M in 2026, creating a $3.75M swing between the lowest and highest months of the year. That gap has direct implications for cash flow and inventory management.
+- Summer months from June through August consistently underperform the annual average, with seasonal indices between 0.87 and 0.92. The business slows predictably every year during this period.
 
 ---
 
-## Business Recommendations
-
-### 1. Inventory Management
-**Action:** Increase Q4 inventory by 50% compared to Q2/Q3
-- Estimated Q4 inventory need: $24.4M in sales → ~$12M in inventory
-- Stock up by October to avoid supply chain delays
-- Reduce summer inventory (July-August) by 20%
-
-### 2. Staffing Strategy
-**Action:** Hire seasonal workers for November-December
-- Peak period: November-December (35% more sales than average)
-- Recommended: +15-20 temporary staff members
-- Can reduce staffing in July-August (slower months)
-
-### 3. Marketing Budget Allocation
-**Action:** Allocate 40% of annual marketing budget to Q4
-- Focus on October (pre-holiday awareness)
-- November (Black Friday campaigns)
-- December (last-minute holiday shoppers)
-- Summer: Shift budget to retention programs
-
-### 4. Cash Flow Planning
-**Action:** Secure working capital for Q4 inventory
-- Prepare for 29% revenue increase ($17.7M more than 2025)
-- Revenue fluctuates $3.8M between lowest and highest month
-- Ensure sufficient cash reserves for inventory purchases
+## Recommendations
+- Q4 is where GlobalMart wins or loses the year. November and December alone are forecast to generate $24.4M in 2026, which is nearly a third of annual revenue. Inventory should be built up from October and staffing should be scaled starting in mid October with peak headcount in place by November. Any supply chain delays or stockouts during this window have an outsized impact on annual performance.
+- Summer is the time to invest in retention, not acquisition. With seasonal indices below 1.0 from June through August, pushing hard on customer acquisition during slow months is an inefficient use of marketing budget. The smarter move is to focus summer spend on keeping existing customers engaged so they return in Q4.
+- Marketing budget allocation should reflect the seasonal reality. Approximately 40% of the annual marketing budget directed toward Q4 is justified by the revenue concentration in that period. The remaining 60% should be weighted toward the months that show the strongest conversion potential, particularly January, April, and September, which all carry seasonal indices above 1.0.
+- Cash flow planning needs to account for the monthly revenue gap. A $3.75M difference between the weakest and strongest months means the business needs adequate working capital to fund inventory buildup in Q3 before the Q4 revenue arrives. This should be factored into the 2026 budget cycle.
+- The forecast should be treated as a living document. Actual monthly results in 2026 should be compared against these projections and the model updated as new data comes in. If actuals deviate significantly from forecast, the seasonal indices may need to be recalibrated.
 
 ---
 
-## Visualizations
+## Executive Conclusion
+GlobalMart is on a strong growth trajectory and the 2026 forecast of $77.79M reflects that momentum continuing. But growth at this pace creates operational risk if the business is not prepared for it. The forecast makes clear that Q4 preparation is the single most important operational priority of the year, that summer requires a different playbook than the rest of the calendar, and that the gap between peak and trough months demands proactive cash flow management.
 
-### Chart 1: Sales Forecast (2023-2026)
-Shows historical sales (2023-2025) and forecasted sales (2026) with confidence intervals.
-
-**Key Insights:**
-- Clear upward trend across all years
-- Seasonal spikes in Q4 visible annually
-- 2026 forecast follows established patterns
-
-### Chart 2: 2026 Monthly Breakdown
-Bar chart showing forecasted sales for each month in 2026.
-
-**Key Insights:**
-- November peak: $9.0M
-- February low: $5.3M
-- Q4 dominance clearly visible
-
-### Chart 3: Yearly Revenue Comparison
-Annual revenue comparison (2023-2026) showing consistent growth.
-
-**Key Insights:**
-- 95% revenue growth from 2023 to 2026 (3 years)
-- Compound annual growth rate (CAGR): ~26%
-
----
-
-## Technical Details
-
-### Data Generation
-- **Period:** 36 months (January 2023 - December 2025)
-- **Components:** Base trend + seasonal patterns + random noise
-- **Seasonality:** Monthly patterns (Black Friday, Christmas, summer slowdown)
-- **Noise:** ±10% random variation (simulates real-world fluctuations)
-
-### Forecasting Model
-**Method:** Trend + Seasonality Decomposition
-
-```python
-# Calculate trend
-slope, intercept = np.polyfit(month_index, sales, 1)
-
-# Calculate seasonal indices
-seasonal_factor = actual_sales / trend_value
-
-# Generate forecast
-forecast = (slope × month_index + intercept) × seasonal_factor
-```
-
-**Confidence Intervals:** ±10% range around forecast
-
-### Model Validation
-- **Training Period:** 36 months (2023-2025)
-- **Forecast Horizon:** 12 months (2026)
-- **Accuracy Metrics:** Visual inspection, pattern consistency
-- **Assumptions:** Historical patterns continue, no major market disruptions
-
----
-
-## Skills Demonstrated
-
-### Technical Skills
-- **Time Series Analysis:** Trend decomposition and seasonal pattern recognition
-- **Python Programming:** pandas, numpy, matplotlib
-- **Data Visualization:** Multi-chart dashboards with clear business insights
-- **Statistical Forecasting:** Linear regression, seasonal indexing
-
-### Business Skills
-- **Strategic Planning:** Inventory, staffing, and budget recommendations
-- **Financial Analysis:** Revenue projections and growth calculations
-- **Stakeholder Communication:** Translating data into actionable insights
-- **Decision Support:** Data-driven recommendations for C-suite
-
----
-
-## Future Enhancements
-
-Potential improvements for this analysis:
-
-1. **Regional Forecasting:** Break down by geographic market (NA, Europe, Asia)
-2. **Product Category Analysis:** Forecast by product line
-3. **External Factors:** Incorporate marketing spend, economic indicators
-4. **Advanced Models:** Test ARIMA, Prophet, or LSTM neural networks
-5. **Real-Time Monitoring:** Compare actual 2026 sales to forecast monthly
-6. **Automated Alerts:** Notify if actual sales deviate >15% from forecast
-
----
-
-## About This Project
-
-This project was completed as part of my data analytics portfolio to demonstrate:
-- Time series forecasting skills
-- Business impact analysis
-- Python data analysis capabilities
-- Strategic thinking and planning
-- Clear communication of complex insights
-
-The dataset is simulated but follows realistic e-commerce patterns based on industry benchmarks and seasonal shopping behavior.
-
+The dataset used for this project was generated using Claude AI.
 ---
 
 ## Author
